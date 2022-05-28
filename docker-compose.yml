@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+  api:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    command: /start-dev.sh
+    volumes:
+      - .:/app
+    ports:
+      - "8010:80"
